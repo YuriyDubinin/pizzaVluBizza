@@ -1,0 +1,69 @@
+.content {
+  background: url(../img/about/fone.jpg) repeat;
+}
+
+.content__about {
+  margin: 10px 0;
+}
+
+/* about */
+.about__body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about_text {
+  background-color: #f7dec6;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+}
+
+.about_text span {
+  color: #f57900;
+}
+
+.about_text p {
+  padding: 10px;
+  text-align: center;
+  font-family: Poppins;
+  color: #542f0b;
+  text-shadow: 0 0 8px whitesmoke;
+  font-size: 30px;
+}
+
+@media (min-width: 0px) {
+  .about_text p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 320px) {
+  .about_text p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 640px) {
+  .about_text p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .about_text p {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about_text p {
+    font-size: 30px;
+  }
+}

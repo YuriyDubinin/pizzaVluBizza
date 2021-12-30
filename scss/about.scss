@@ -1,0 +1,72 @@
+// Variables
+$first-color: #f7dec6;
+$second-color: #fdbc7f;
+$third-color: #542f0b;
+$fourth-color: #ad415b;
+$fifth-color: whitesmoke;
+$sixth-color: #f57900;
+
+$title-font: Indie Flower;
+$header-font: Dosis;
+$text-font: Poppins;
+$footer-font: Arial;
+$btn-font: Noto Sans JP;
+
+// Styles
+.content {
+    background: url(../img/about/fone.jpg) repeat;
+    &__about {
+        margin: 10px 0;
+    }
+}
+
+/* about */
+.about {
+    &__body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &_text {
+        background-color: $first-color;
+        border-radius: 40px;
+        box-shadow: 0 0 10px black;
+
+        & span {
+            color: $sixth-color;
+        }
+
+        & p {
+            padding: 10px;
+            text-align: center;
+            font-family: $text-font;
+            color: $third-color;
+            text-shadow: 0 0 8px $fifth-color;
+            font-size: 30px;
+
+            @media (min-width: 0px) {
+                font-size: 16px;
+            }
+
+            @media (min-width: 320px) {
+                font-size: 20px;
+            }
+
+            @media (min-width: 640px) {
+                font-size: 20px;
+            }
+
+            @media (min-width: 960px) {
+                font-size: 28px;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 30px;
+            }
+        }
+    }
+}
