@@ -28,7 +28,7 @@ $btn-font: Noto Sans JP;
 /* menu */
 .menu {
     &__pizza {
-        flex: 1 1 69%;
+        flex: 1 1 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -38,7 +38,7 @@ $btn-font: Noto Sans JP;
         }
 
         @media (min-width: 1024px) {
-            flex: 1 1 69%;
+            flex: 1 1 100%;
         }
     }
 
