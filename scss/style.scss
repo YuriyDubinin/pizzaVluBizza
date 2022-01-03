@@ -21,7 +21,7 @@ $text-font: Poppins;
 $footer-font: Arial;
 $btn-font: Noto Sans JP;
 
-// Titles
+/* Titles */
 /* title */
 .title {
     display: flex;
@@ -104,12 +104,21 @@ $btn-font: Noto Sans JP;
     }
 }
 
+/* Additional classes */
 /* scroll-lock */
 .scroll-lock {
     overflow: hidden;
 }
 
-// Styles
+/* try to guess */
+.show-block {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles */
 /* wrapper */
 .wrapper {
     min-height: 100%;
@@ -310,14 +319,6 @@ $btn-font: Noto Sans JP;
     }
 }
 
-/* try to guess */
-.show-block {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
 /* highlights active tab in headder */
 .active-tab {
     color: $first-color;
@@ -338,6 +339,7 @@ $btn-font: Noto Sans JP;
     &__main-slider {
         display: block;
         margin: 90px 0 0 0;
+        position: relative;
     }
 
     &__title {
@@ -376,15 +378,42 @@ $btn-font: Noto Sans JP;
     }
     &__item {
         display: none;
-        height: 550px;
+        height: 570px;
         width: 1300px;
+
         img {
             object-fit: cover;
             width: 100%;
             height: 100%;
         }
     }
-    &__btns {
+    &__main-slider-btns {
+        display: block;
+    }
+}
+//sliders buttons
+.main-slider-btns {
+    &__prev,
+    &__next {
+        position: absolute; //relatively from main-slider
+        cursor: pointer;
+        top: 45%;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+
+    &__next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
     }
 }
 

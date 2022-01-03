@@ -6,14 +6,13 @@ $(document).ready(function () {
 });
 
 //main-slider
-
 let slides = document.querySelectorAll(".main-slider__item"),
-    btnRight = document.querySelector(".main-slider-btn-right"),
-    btnLeft = document.querySelector(".main-slider-btn-left");
+    btnRight = document.querySelector(".main-slider-btns__next"),
+    btnLeft = document.querySelector(".main-slider-btns__prev");
 
 let mainSliderCounter = 0;
 
-btnLeft.addEventListener("click", function () {
+btnLeft.addEventListener("click", () => {
     if (mainSliderCounter === 0) {
         slides[mainSliderCounter].style.display = "none";
         mainSliderCounter = slides.length - 1;
@@ -24,7 +23,7 @@ btnLeft.addEventListener("click", function () {
         slides[mainSliderCounter].style.display = "block";
     }
 });
-btnRight.addEventListener("click", function () {
+btnRight.addEventListener("click", () => {
     if (mainSliderCounter === slides.length - 1) {
         slides[mainSliderCounter].style.display = "none";
         mainSliderCounter = 0;

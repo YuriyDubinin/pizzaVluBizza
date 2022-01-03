@@ -93,6 +93,7 @@ h6 {
 }
 
 /*--------------------*/
+/* Titles */
 /* title */
 .title {
   display: -webkit-box;
@@ -208,11 +209,22 @@ h6 {
   color: #542f0b;
 }
 
+/* Additional classes */
 /* scroll-lock */
 .scroll-lock {
   overflow: hidden;
 }
 
+/* try to guess */
+.show-block {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styles */
 /* wrapper */
 .wrapper {
   min-height: 100%;
@@ -450,15 +462,6 @@ h6 {
   }
 }
 
-/* try to guess */
-.show-block {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
 /* highlights active tab in headder */
 .active-tab {
   color: #f7dec6;
@@ -487,6 +490,7 @@ h6 {
 .content__main-slider {
   display: block;
   margin: 90px 0 0 0;
+  position: relative;
 }
 
 .content__title {
@@ -532,7 +536,7 @@ h6 {
 
 .main-slider__item {
   display: none;
-  height: 550px;
+  height: 570px;
   width: 1300px;
 }
 
@@ -541,6 +545,33 @@ h6 {
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.main-slider__main-slider-btns {
+  display: block;
+}
+
+.main-slider-btns__prev, .main-slider-btns__next {
+  position: absolute;
+  cursor: pointer;
+  top: 45%;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.main-slider-btns__prev:hover, .main-slider-btns__next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.main-slider-btns__next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* offers */
