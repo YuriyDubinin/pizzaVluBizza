@@ -13,6 +13,7 @@ $second-color: #fdbc7f;
 $third-color: #542f0b;
 $fourth-color: #ad415b;
 $fifth-color: whitesmoke;
+$header-color: rgba(245, 245, 245, 0.329);
 
 $title-font: Indie Flower;
 $header-font: Dosis;
@@ -119,6 +120,7 @@ $btn-font: Noto Sans JP;
 
 /* container */
 .container {
+    overflow: hidden;
     max-width: 1200px;
     margin: 0px auto;
     padding: 0 15px;
@@ -155,7 +157,7 @@ $btn-font: Noto Sans JP;
     top: 0;
     left: 0;
     z-index: 17;
-    background-color: $second-color;
+    background-color: $header-color;
     font-family: $header-font;
     font-weight: 500;
 
@@ -166,7 +168,7 @@ $btn-font: Noto Sans JP;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $second-color;
+        background-color: $header-color;
         z-index: 2;
         box-shadow: 5px 0 10px #542f0b;
     }
@@ -308,6 +310,15 @@ $btn-font: Noto Sans JP;
     }
 }
 
+/* try to guess */
+.show-block {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* highlights active tab in headder */
 .active-tab {
     color: $first-color;
     text-shadow: 0 0 5px $third-color;
@@ -317,7 +328,7 @@ $btn-font: Noto Sans JP;
 .content {
     flex: 1 1 auto;
     font-family: $text-font;
-    background: url(../img/fone.jpg) repeat;
+    background: url(../img/fone_2.jpg) repeat;
 
     &__row {
         display: flex;
@@ -325,11 +336,12 @@ $btn-font: Noto Sans JP;
     }
 
     &__main-slider {
-        height: 620px;
+        display: block;
+        margin: 90px 0 0 0;
     }
 
     &__title {
-        padding: 40px 0;
+        padding: 20px 0;
     }
 
     &__offers {
@@ -344,6 +356,35 @@ $btn-font: Noto Sans JP;
 
     &__menu {
         display: block;
+    }
+
+    &__adv {
+        display: block;
+        height: 400px;
+    }
+
+    &__info {
+        display: block;
+        height: 400px;
+    }
+}
+
+/* main-slider */
+.main-slider {
+    &__slides {
+        display: flex;
+    }
+    &__item {
+        display: none;
+        height: 550px;
+        width: 1300px;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__btns {
     }
 }
 
@@ -649,7 +690,10 @@ $btn-font: Noto Sans JP;
 
 /* adv */
 .adv {
-    height: 400px;
+}
+
+/* info */
+.info {
 }
 
 /* footer */
