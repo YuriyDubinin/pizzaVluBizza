@@ -7,30 +7,38 @@ $(document).ready(function () {
 
 //main-slider
 let slides = document.querySelectorAll(".main-slider__item"),
-    btnRight = document.querySelector(".main-slider-btns__next"),
-    btnLeft = document.querySelector(".main-slider-btns__prev");
+    btnNext = document.querySelector(".main-slider-btns__next"),
+    btnPrev = document.querySelector(".main-slider-btns__prev");
 
-let mainSliderCounter = 0;
+let slideIndex = 0;
 
-btnLeft.addEventListener("click", () => {
-    if (mainSliderCounter === 0) {
-        slides[mainSliderCounter].style.display = "none";
-        mainSliderCounter = slides.length - 1;
-        slides[mainSliderCounter].style.display = "block";
+btnNext.addEventListener("click", () => {
+    if (slideIndex === slides.length - 1) {
+        slides[slideIndex].classList.remove("show", "fade");
+        slides[slideIndex].classList.add("hide");
+        slideIndex = 0;
+        slides[slideIndex].classList.remove("hide");
+        slides[slideIndex].classList.add("show", "fade");
     } else {
-        slides[mainSliderCounter].style.display = "none";
-        --mainSliderCounter;
-        slides[mainSliderCounter].style.display = "block";
+        slides[slideIndex].classList.remove("show", "fade");
+        slides[slideIndex].classList.add("hide");
+        ++slideIndex;
+        slides[slideIndex].classList.remove("hide");
+        slides[slideIndex].classList.add("show", "fade");
     }
 });
-btnRight.addEventListener("click", () => {
-    if (mainSliderCounter === slides.length - 1) {
-        slides[mainSliderCounter].style.display = "none";
-        mainSliderCounter = 0;
-        slides[mainSliderCounter].style.display = "block";
+btnPrev.addEventListener("click", () => {
+    if (slideIndex === 0) {
+        slides[slideIndex].classList.remove("show", "fade");
+        slides[slideIndex].classList.add("hide");
+        slideIndex = slides.length - 1;
+        slides[slideIndex].classList.remove("hide");
+        slides[slideIndex].classList.add("show", "fade");
     } else {
-        slides[mainSliderCounter].style.display = "none";
-        ++mainSliderCounter;
-        slides[mainSliderCounter].style.display = "block";
+        slides[slideIndex].classList.remove("show", "fade");
+        slides[slideIndex].classList.add("hide");
+        --slideIndex;
+        slides[slideIndex].classList.remove("hide");
+        slides[slideIndex].classList.add("show", "fade");
     }
 });
