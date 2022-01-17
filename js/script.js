@@ -52,7 +52,7 @@ function switchesToPrevSlide() {
 function switchesSlidesByTime() {
     /* switches slides in time, stops switching when the user hovers the 
     mouse over the image or button, restores timer when leaving area */
-    let timerId = setInterval(switchesToNextSlide, 4000);
+    let timerId = setInterval(switchesToNextSlide, 6000);
 
     const slider = document.querySelector(".main-slider__slides");
 

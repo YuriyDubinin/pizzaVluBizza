@@ -9,7 +9,7 @@
 
 // Variables
 $first-color: #f7dec6;
-$second-color: #fdbc7f;
+$second-color: rgba(245, 245, 245, 0.8);
 $third-color: #542f0b;
 $fourth-color: #ad415b;
 $fifth-color: whitesmoke;
@@ -137,7 +137,7 @@ $btn-font: Noto Sans JP;
     }
 
     @media (min-width: 1280px) {
-        max-width: 1200px;
+        max-width: 1430px;
     }
 
     @media (min-width: 1920px) {
@@ -315,7 +315,7 @@ $btn-font: Noto Sans JP;
 .content {
     flex: 1 1 auto;
     font-family: $text-font;
-    background: url(../img/fone_2.jpg) repeat;
+    background: linear-gradient(rgba(255, 255, 255, 0.5)), url(../img/fone_2.jpg) repeat;
 
     &__row {
         display: flex;
@@ -324,7 +324,7 @@ $btn-font: Noto Sans JP;
 
     &__main-slider {
         display: block;
-        margin: 90px 0 0 0;
+        padding: 90px 0 0 0;
         position: relative;
     }
 
@@ -347,13 +347,27 @@ $btn-font: Noto Sans JP;
     }
 
     &__adv {
-        display: block;
-        height: 400px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        max-height: 400px;
     }
 
-    &__info {
-        display: block;
-        height: 400px;
+    &__delivery {
+        display: flex;
+        flex-wrap: nowrap;
+        font-family: $text-font;
+        font-size: 18px;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        @media screen and (min-width: 0) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 640px) {
+            flex-wrap: nowrap;
+        }
     }
 }
 
@@ -361,6 +375,7 @@ $btn-font: Noto Sans JP;
 .main-slider {
     &__slides {
         display: flex;
+        justify-content: center;
     }
     &__item {
         display: none;
@@ -383,7 +398,7 @@ $btn-font: Noto Sans JP;
     &__next {
         position: absolute; //relatively from main-slider
         cursor: pointer;
-        top: 45%;
+        top: 50%;
         padding: 16px;
         background-color: rgba(0, 0, 0, 0.2);
         color: white;
@@ -398,8 +413,10 @@ $btn-font: Noto Sans JP;
     }
 
     &__next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
+        right: 3.6%;
+    }
+    &__prev {
+        left: 3.6%;
     }
 }
 
@@ -705,10 +722,54 @@ $btn-font: Noto Sans JP;
 
 /* adv */
 .adv {
+    &__video-item {
+        padding: 30px 0;
+        max-width: 600px;
+    }
 }
 
-/* info */
-.info {
+/* delivery */
+.delivery {
+    &__introduce {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding: 20px;
+        p {
+            font-size: 28px;
+        }
+        span {
+            color: orange;
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        flex: 1 1 100%;
+        font-size: 22px;
+        p {
+            padding: 20px;
+        }
+        span {
+            color: orange;
+        }
+    }
+
+    &__guarantees {
+        flex: 1 1 100%;
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            padding: 20px;
+        }
+        span {
+            color: orange;
+        }
+    }
 }
 
 /* footer */
