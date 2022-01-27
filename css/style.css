@@ -479,6 +479,18 @@ h6 {
   position: relative;
 }
 
+@media screen and (min-width: 0px) {
+  .content__main-slider {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .content__main-slider {
+    display: block;
+  }
+}
+
 .content__title {
   padding: 20px 0;
 }
@@ -1035,6 +1047,24 @@ h6 {
 .adv__video-item {
   padding: 30px 0;
   max-width: 600px;
+}
+
+@media (min-width: 0px) {
+  .adv__video-item {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 320px) {
+  .adv__video-item {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 640px) {
+  .adv__video-item {
+    max-width: 600px;
+  }
 }
 
 /* delivery */

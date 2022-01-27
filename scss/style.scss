@@ -327,6 +327,14 @@ $btn-font: Noto Sans JP;
         display: block;
         padding: 90px 0 0 0;
         position: relative;
+
+        @media screen and (min-width: 0px) {
+            display: none;
+        }
+
+        @media screen and (min-width: 767px) {
+            display: block;
+        }
     }
 
     &__title {
@@ -727,6 +735,18 @@ $btn-font: Noto Sans JP;
     &__video-item {
         padding: 30px 0;
         max-width: 600px;
+
+        @media (min-width: 0px) {
+            max-width: 200px;
+        }
+
+        @media (min-width: 320px) {
+            max-width: 320px;
+        }
+
+        @media (min-width: 640px) {
+            max-width: 600px;
+        }
     }
 }
 
