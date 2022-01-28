@@ -1,6 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+    /* burger menu */
     $(document).ready(function () {
         $(".header__burger").click(function (event) {
             $(".header__burger, .header__navigation").toggleClass("active");
@@ -10,89 +11,129 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* main-slider */
     //declaration
-    let slides = document.querySelectorAll(".main-slider__item"),
+    const slides = document.querySelectorAll(".main-slider__item"),
+        slidesWrapper = document.querySelector(".main-slider__slider-wrapper"),
+        slidesField = document.querySelector(".main-slider__inner"),
         btnNext = document.querySelector(".main-slider-btns__next"),
-        btnPrev = document.querySelector(".main-slider-btns__prev");
+        btnPrev = document.querySelector(".main-slider-btns__prev"),
+        width = window.getComputedStyle(slidesWrapper).width,
+        slider = document.querySelector(".content__main-slider");
 
-    let slideIndex = 0;
+    let slideIndex = 1,
+        offset = 0;
 
-    function switchesToNextSlide() {
-        if (slideIndex === slides.length - 1) {
-            slides[slideIndex].classList.remove("show", "fade");
-            slides[slideIndex].classList.add("hide");
-            slideIndex = 0;
-            slides[slideIndex].classList.remove("hide");
-            slides[slideIndex].classList.add("show", "fade");
+    function controlSlideIndex(index) {
+        if (index > slides.length) {
+            //transition from the last slide to the first
+            slideIndex = 1;
+            console.log(slideIndex); //log for checking slideIndex
+        } else if (index < 1) {
+            //transition from the first slide to the last
+            slideIndex = slides.length;
+            console.log(slideIndex); //log for checking slideIndex
         } else {
-            slides[slideIndex].classList.remove("show", "fade");
-            slides[slideIndex].classList.add("hide");
-            ++slideIndex;
-            slides[slideIndex].classList.remove("hide");
-            slides[slideIndex].classList.add("show", "fade");
+            slideIndex = slideIndex;
+            console.log(slideIndex); //log for checking slideIndex
         }
     }
 
-    function switchesToPrevSlide() {
-        if (slideIndex === 0) {
-            slides[slideIndex].classList.remove("show", "fade");
-            slides[slideIndex].classList.add("hide");
-            slideIndex = slides.length - 1;
-            slides[slideIndex].classList.remove("hide");
-            slides[slideIndex].classList.add("show", "fade");
-        } else {
-            slides[slideIndex].classList.remove("show", "fade");
-            slides[slideIndex].classList.add("hide");
-            --slideIndex;
-            slides[slideIndex].classList.remove("hide");
-            slides[slideIndex].classList.add("show", "fade");
-        }
+    function offsetOfSlide(offset = 0) {
+        slidesField.style.transform = `translateX(-${offset}px)`;
     }
 
-    //change slides by time, needs to be reworked
-    function switchesSlidesByTime() {
-        /* switches slides in time, stops switching when the user hovers the 
-        mouse over the image or button, restores timer when leaving area */
-        let timerId = setInterval(switchesToNextSlide, 6000);
+    function switchToNextSlide() {
+        //check indentation
+        if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+            offset = 0;
+        } else {
+            offset += +width.slice(0, width.length - 2);
+        }
 
-        const slider = document.querySelector(".main-slider__slides");
+        //movement
+        offsetOfSlide(offset);
+    }
 
-        let images = slider.querySelectorAll("img");
+    function switchToPrevSlide() {
+        //check indentation
+        if (offset == 0) {
+            offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+        } else {
+            offset -= +width.slice(0, width.length - 2);
+        }
 
-        //stops automatic change of slides when howering over the image
-        images.forEach((item) => {
-            item.addEventListener("mouseenter", () => {
-                clearInterval(timerId);
-            });
+        //movement
+        offsetOfSlide(offset);
+    }
+
+    //displaying active indicator
+    function showActiveSliderIndicator() {
+        dots.forEach((dot, i) => {
+            dot.style.opacity = ".5";
         });
-
-        //starts automatic change of slides when the mouse leaving from the image
-        images.forEach((item) => {
-            item.addEventListener("mouseleave", () => {
-                timerId = setInterval(switchesToNextSlide, 4000);
-            });
-        });
-
-        //stops automatic change of slides when howering over the slider buttons
-        [btnNext, btnPrev].forEach((item) => {
-            item.addEventListener("mouseenter", () => {
-                clearInterval(timerId);
-            });
-        });
-
-        //starts automatic change of slides when the mouse leaving from slider buttons
-        [btnNext, btnPrev].forEach((item) => {
-            item.addEventListener("mouseleave", () => {
-                timerId = setInterval(switchesToNextSlide, 4000);
-            });
-        });
+        dots[slideIndex - 1].style.opacity = "1";
     }
 
     //execution
-    //buttons 'next' & 'prev' in main-slider
+    //setting slidesField width depnding of the number of slides
+    slidesField.style.width = 100 * slides.lenght + `%`;
+
+    //setting clean width to every slide
+    slides.forEach((slide) => {
+        slide.style.width = width;
+    });
+
+    //slider navigation
+    //create a wrapper for indicators
+    const indicators = document.createElement("ol");
+
+    indicators.classList.add("carousel-indicators");
+
+    slider.append(indicators);
+
+    //creation of indicators equal to the number of slides
+    for (let i = 0; i < slides.length; i++) {
+        const indicator = document.createElement("li");
+
+        indicator.classList.add("dot");
+
+        indicator.setAttribute("data-indicator-number", i + 1);
+
+        indicators.append(indicator);
+    }
+
+    const dots = document.querySelectorAll(".dot"); //all formed indicators
+
+    //setting the initial position of slider
+    showActiveSliderIndicator(); //initial active indicator
+
+    offset = +width.slice(0, width.length - 2) * (slideIndex - 1); //initial offset
+
+    offsetOfSlide(offset); //initial slide
+
+    //interaction with slider buttons
     btnNext.addEventListener("click", () => {
-        switchesToNextSlide();
+        slideIndex++;
+        controlSlideIndex(slideIndex);
+        showActiveSliderIndicator();
+        switchToNextSlide();
     });
     btnPrev.addEventListener("click", () => {
-        switchesToPrevSlide();
+        slideIndex--;
+        controlSlideIndex(slideIndex);
+        showActiveSliderIndicator();
+        switchToPrevSlide();
+    });
+
+    //interaction with slider navigation
+    indicators.addEventListener("click", (event) => {
+        if (event.target && event.target.classList.contains("dot")) {
+            slideIndex = event.target.getAttribute("data-indicator-number");
+
+            offset = +width.slice(0, width.length - 2) * (slideIndex - 1);
+
+            offsetOfSlide(offset);
+
+            showActiveSliderIndicator();
+        }
     });
 });
