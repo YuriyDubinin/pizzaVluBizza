@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function switchToNextSlide() {
         //check indentation
-        if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+        if (offset == removeNonDigits(width) * (slides.length - 1)) {
             offset = 0;
         } else {
-            offset += +width.slice(0, width.length - 2);
+            offset += removeNonDigits(width);
         }
 
         //movement
@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function switchToPrevSlide() {
         //check indentation
         if (offset == 0) {
-            offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+            offset = removeNonDigits(width) * (slides.length - 1);
         } else {
-            offset -= +width.slice(0, width.length - 2);
+            offset -= removeNonDigits(width);
         }
 
         //movement
@@ -71,6 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
             dot.style.opacity = ".5";
         });
         dots[slideIndex - 1].style.opacity = "1";
+    }
+
+    //extracts only a number from a string
+    function removeNonDigits(str) {
+        return +str.replace(/\D/g, "");
     }
 
     //execution
@@ -106,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //setting the initial position of slider
     showActiveSliderIndicator(); //initial active indicator
 
-    offset = +width.slice(0, width.length - 2) * (slideIndex - 1); //initial offset
+    offset = removeNonDigits(width) * (slideIndex - 1); //initial offset
 
     offsetOfSlide(offset); //initial slide
 
@@ -129,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target && event.target.classList.contains("dot")) {
             slideIndex = event.target.getAttribute("data-indicator-number");
 
-            offset = +width.slice(0, width.length - 2) * (slideIndex - 1);
+            offset = removeNonDigits(width) * (slideIndex - 1);
 
             offsetOfSlide(offset);
 
