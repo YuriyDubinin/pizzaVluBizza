@@ -26,11 +26,12 @@ $btn-font: Noto Sans JP;
     }
 }
 .menu {
-    &__pizza {
+    &__menu-field {
         flex: 1 1 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0 0 10px 0;
 
         @media (min-width: 0) {
             flex: 1 1 100%;
@@ -40,15 +41,8 @@ $btn-font: Noto Sans JP;
             flex: 1 1 100%;
         }
     }
-
-    &__milkshake {
-        flex: 1 1 29%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
 }
-.pizza {
+.menu-field {
     &__subtitle {
         flex: 1 1 100%;
     }
@@ -75,72 +69,6 @@ $btn-font: Noto Sans JP;
         @media (min-width: 1024px) {
             flex: 0 0 30%;
         }
-    }
-
-    &__image {
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        & img {
-            max-width: 100%;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-        }
-    }
-
-    &__label {
-        background-color: $first-color;
-
-        @media (min-width: 0) {
-            font-size: 36px;
-        }
-        @media (min-width: 320px) {
-            font-size: 38px;
-        }
-        @media (min-width: 640px) {
-            font-size: 40px;
-        }
-        @media (min-width: 1024px) {
-            font-size: 42px;
-        }
-    }
-
-    &__text {
-        flex: 1 1 100%;
-        font-family: $text-font;
-        font-size: 18px;
-        padding: 5px;
-        color: $third-color;
-    }
-
-    &__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px 0;
-    }
-
-    &__link {
-        padding: 8px 14px;
-        font-size: 16px;
-    }
-}
-.milkshake {
-    &__subtitle {
-        flex: 1 1 100%;
-        margin: 15px 0 15px 0;
-    }
-
-    &__item {
-        flex: 0 0 60%;
-        display: flex;
-        flex-direction: column;
-        margin: 10px 0 0 0;
-
-        border-radius: 5px;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        background-color: $second-color;
-        box-shadow: 0 0 10px $fourth-color;
     }
 
     &__image {

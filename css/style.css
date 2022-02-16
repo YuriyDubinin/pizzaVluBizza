@@ -459,7 +459,7 @@ h6 {
   margin: 15px 0;
 }
 
-.menu__pizza {
+.menu__menu-field {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
@@ -471,10 +471,11 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 0 10px 0;
 }
 
 @media (min-width: 0) {
-  .menu__pizza {
+  .menu__menu-field {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
@@ -482,33 +483,20 @@ h6 {
 }
 
 @media (min-width: 1024px) {
-  .menu__pizza {
+  .menu__menu-field {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
 }
 
-.menu__milkshake {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 29%;
-          flex: 1 1 29%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.pizza__subtitle {
+.menu-field__subtitle {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
 }
 
-.pizza__item {
+.menu-field__item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32%;
           flex: 0 0 32%;
@@ -528,7 +516,7 @@ h6 {
 }
 
 @media (min-width: 0) {
-  .pizza__item {
+  .menu-field__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -537,7 +525,7 @@ h6 {
 }
 
 @media (min-width: 640px) {
-  .pizza__item {
+  .menu-field__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 48%;
             flex: 0 0 48%;
@@ -546,53 +534,53 @@ h6 {
 }
 
 @media (min-width: 1024px) {
-  .pizza__item {
+  .menu-field__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
   }
 }
 
-.pizza__image {
+.menu-field__image {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
 
-.pizza__image img {
+.menu-field__image img {
   max-width: 100%;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
 
-.pizza__label {
+.menu-field__label {
   background-color: #f7dec6;
 }
 
 @media (min-width: 0) {
-  .pizza__label {
+  .menu-field__label {
     font-size: 36px;
   }
 }
 
 @media (min-width: 320px) {
-  .pizza__label {
+  .menu-field__label {
     font-size: 38px;
   }
 }
 
 @media (min-width: 640px) {
-  .pizza__label {
+  .menu-field__label {
     font-size: 40px;
   }
 }
 
 @media (min-width: 1024px) {
-  .pizza__label {
+  .menu-field__label {
     font-size: 42px;
   }
 }
 
-.pizza__text {
+.menu-field__text {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
@@ -602,7 +590,7 @@ h6 {
   color: rgba(0, 0, 0, 0.753);
 }
 
-.pizza__btn {
+.menu-field__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,101 +603,7 @@ h6 {
   padding: 5px 0;
 }
 
-.pizza__link {
-  padding: 8px 14px;
-  font-size: 16px;
-}
-
-.milkshake__subtitle {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  margin: 15px 0 15px 0;
-}
-
-.milkshake__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 10px 0 0 0;
-  border-radius: 5px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  background-color: rgba(245, 245, 245, 0.8);
-  -webkit-box-shadow: 0 0 10px #ad415b;
-          box-shadow: 0 0 10px #ad415b;
-}
-
-.milkshake__image {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-}
-
-.milkshake__image img {
-  max-width: 100%;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-}
-
-.milkshake__label {
-  background-color: #f7dec6;
-}
-
-@media (min-width: 0) {
-  .milkshake__label {
-    font-size: 36px;
-  }
-}
-
-@media (min-width: 320px) {
-  .milkshake__label {
-    font-size: 38px;
-  }
-}
-
-@media (min-width: 640px) {
-  .milkshake__label {
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .milkshake__label {
-    font-size: 42px;
-  }
-}
-
-.milkshake__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  font-family: Poppins;
-  font-size: 18px;
-  padding: 5px;
-  color: rgba(0, 0, 0, 0.753);
-}
-
-.milkshake__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 5px 0;
-}
-
-.milkshake__link {
+.menu-field__link {
   padding: 8px 14px;
   font-size: 16px;
 }
