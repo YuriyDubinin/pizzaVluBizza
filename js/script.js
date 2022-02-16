@@ -1,11 +1,10 @@
 "use strict";
 
+// Burger-menu
 document.addEventListener("DOMContentLoaded", () => {
-    /* burger menu */
-    $(document).ready(function () {
-        $(".header__burger").click(function (event) {
-            $(".header__burger, .header__navigation").toggleClass("active");
-            $("body").toggleClass("scroll-lock");
-        });
+    document.querySelector(".header__burger").addEventListener("click", () => {
+        document.querySelector(".header__burger").classList.toggle("active");
+        document.querySelector(".header__navigation").classList.toggle("active");
+        document.querySelector("body").classList.toggle("scroll-lock");
     });
 });
