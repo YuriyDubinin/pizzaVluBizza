@@ -1,0 +1,43 @@
+// Variables
+$first-color: #f7dec6;
+$second-color: rgba(245, 245, 245, 0.8);
+$third-color: rgba(0, 0, 0, 0.753);
+$fourth-color: #ad415b;
+$fifth-color: whitesmoke;
+$header-color: rgba(245, 245, 245, 0.329);
+$footer-color: rgba(0, 0, 0, 0.97);
+
+$title-font: Indie Flower;
+$header-font: Dosis;
+$text-font: Poppins;
+$footer-font: Arial;
+$btn-font: Noto Sans JP;
+
+// Styles
+/* highlights active tab in headder */
+.active-tab {
+    color: $first-color;
+    text-shadow: 0 0 5px $third-color;
+}
+.scroll-lock {
+    overflow: hidden;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 0.6s;
+
+    @keyframes fade {
+        0% {
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}

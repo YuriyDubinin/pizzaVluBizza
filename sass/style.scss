@@ -1,0 +1,87 @@
+// Reset CSS
+@import "_nullstyle.scss";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap");
+
+// Modules
+@import "_header.scss"; // Header
+@import "_special_offers.scss"; // Special offers
+@import "_menu.scss"; // Menu (pizza & milkshakes)
+@import "_adv.scss"; // Adv
+@import "_delivery.scss"; // Delivery
+@import "_footer.scss"; // Footer
+@import "_additional_classes.scss"; // Additional classes
+@import "_titles_and_buttons.scss"; // Titles and buttons
+
+// Variables
+$first-color: #f7dec6;
+$second-color: rgba(245, 245, 245, 0.8);
+$third-color: rgba(0, 0, 0, 0.753);
+$fourth-color: #ad415b;
+$fifth-color: whitesmoke;
+$header-color: rgba(245, 245, 245, 0.329);
+$footer-color: rgba(0, 0, 0, 0.97);
+
+$title-font: Indie Flower;
+$header-font: Dosis;
+$text-font: Poppins;
+$footer-font: Arial;
+$btn-font: Noto Sans JP;
+
+// Styles
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0 15px;
+
+    @media (min-width: 0px) {
+        max-width: none;
+    }
+
+    @media (min-width: 320px) {
+        max-width: 610px;
+    }
+
+    @media (min-width: 640px) {
+        max-width: 1000px;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 1000px;
+    }
+
+    @media (min-width: 1280px) {
+        max-width: 1430px;
+    }
+
+    @media (min-width: 1920px) {
+        max-width: 1800px;
+    }
+}
+.content {
+    flex: 1 1 auto;
+    font-family: $text-font;
+    background: linear-gradient(rgba(255, 255, 255, 0.5)), url(../img/fone_2.jpg) repeat;
+    padding: 70px 0 0 0;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    //need to rewrite the adaptive to match the code-style of the project
+    @media screen and (max-width: 767px) {
+        padding: 45px 0 0 0;
+    }
+}

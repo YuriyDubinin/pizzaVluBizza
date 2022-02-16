@@ -1,10 +1,11 @@
 // Variables
 $first-color: #f7dec6;
-$second-color: #fdbc7f;
-$third-color: #542f0b;
+$second-color: rgba(245, 245, 245, 0.8);
+$third-color: rgba(0, 0, 0, 0.753);
 $fourth-color: #ad415b;
 $fifth-color: whitesmoke;
-$sixth-color: #f57900;
+$header-color: rgba(245, 245, 245, 0.329);
+$footer-color: rgba(0, 0, 0, 0.97);
 
 $title-font: Indie Flower;
 $header-font: Dosis;
@@ -24,8 +25,6 @@ $btn-font: Noto Sans JP;
         margin: 15px 0;
     }
 }
-
-/* menu */
 .menu {
     &__pizza {
         flex: 1 1 100%;
@@ -49,8 +48,6 @@ $btn-font: Noto Sans JP;
         justify-content: space-around;
     }
 }
-
-/* pizza */
 .pizza {
     &__subtitle {
         flex: 1 1 100%;
@@ -127,8 +124,6 @@ $btn-font: Noto Sans JP;
         font-size: 16px;
     }
 }
-
-/* milkshake */
 .milkshake {
     &__subtitle {
         flex: 1 1 100%;

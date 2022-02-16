@@ -1,0 +1,91 @@
+// Variables
+$first-color: #f7dec6;
+$second-color: rgba(245, 245, 245, 0.8);
+$third-color: rgba(0, 0, 0, 0.753);
+$fourth-color: #ad415b;
+$fifth-color: whitesmoke;
+$header-color: rgba(245, 245, 245, 0.329);
+$footer-color: rgba(0, 0, 0, 0.97);
+
+$title-font: Indie Flower;
+$header-font: Dosis;
+$text-font: Poppins;
+$footer-font: Arial;
+$btn-font: Noto Sans JP;
+
+// Styles
+
+// Titles
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-family: $title-font;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: $third-color;
+    text-shadow: 2px 2px 5px $third-color;
+
+    @media (min-width: 0px) {
+        font-size: 36px;
+    }
+    @media (min-width: 320px) {
+        font-size: 38px;
+    }
+    @media (min-width: 640px) {
+        font-size: 45px;
+    }
+    @media (min-width: 1024px) {
+        font-size: 50px;
+    }
+}
+.subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $title-font;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: $third-color;
+    text-shadow: 2px 2px 5px $third-color;
+
+    @media (min-width: 0px) {
+        font-size: 36px;
+    }
+    @media (min-width: 320px) {
+        font-size: 36px;
+    }
+    @media (min-width: 640px) {
+        font-size: 48px;
+    }
+}
+.label {
+    text-align: center;
+    font-family: $title-font;
+    color: $third-color;
+}
+
+// Buttons
+.btn-1 {
+    display: inline-block;
+    font-size: 20px;
+    font-family: $btn-font;
+    border: 0px;
+    border-radius: 3px;
+    padding: 12px 20px;
+    background-color: $third-color;
+    color: $second-color;
+    transition: all 0.4s ease 0s;
+    position: relative;
+
+    &:hover {
+        background-color: $second-color;
+        color: $third-color;
+        box-shadow: 0 0 10px $third-color;
+    }
+
+    &:active {
+        background-color: $second-color;
+        color: $third-color;
+    }
+}

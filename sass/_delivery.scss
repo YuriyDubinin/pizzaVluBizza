@@ -1,0 +1,76 @@
+// Variables
+$first-color: #f7dec6;
+$second-color: rgba(245, 245, 245, 0.8);
+$third-color: rgba(0, 0, 0, 0.753);
+$fourth-color: #ad415b;
+$fifth-color: whitesmoke;
+$header-color: rgba(245, 245, 245, 0.329);
+$footer-color: rgba(0, 0, 0, 0.97);
+
+$title-font: Indie Flower;
+$header-font: Dosis;
+$text-font: Poppins;
+$footer-font: Arial;
+$btn-font: Noto Sans JP;
+
+// Styles
+.content {
+    &__delivery {
+        display: flex;
+        flex-wrap: nowrap;
+        font-family: $text-font;
+        font-size: 18px;
+        color: $third-color;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        @media screen and (min-width: 0) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 640px) {
+            flex-wrap: nowrap;
+        }
+    }
+}
+.delivery {
+    &__introduce {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding: 20px;
+        p {
+            font-size: 28px;
+        }
+        span {
+            color: orange;
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        flex: 1 1 100%;
+        font-size: 22px;
+        p {
+            padding: 20px;
+        }
+        span {
+            color: orange;
+        }
+    }
+
+    &__guarantees {
+        flex: 1 1 100%;
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            padding: 20px;
+        }
+        span {
+            color: orange;
+        }
+    }
+}

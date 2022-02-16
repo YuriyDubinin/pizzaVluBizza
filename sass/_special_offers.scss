@@ -1,0 +1,144 @@
+// Variables
+$first-color: #f7dec6;
+$second-color: rgba(245, 245, 245, 0.8);
+$third-color: rgba(0, 0, 0, 0.753);
+$fourth-color: #ad415b;
+$fifth-color: whitesmoke;
+$header-color: rgba(245, 245, 245, 0.329);
+$footer-color: rgba(0, 0, 0, 0.97);
+
+$title-font: Indie Flower;
+$header-font: Dosis;
+$text-font: Poppins;
+$footer-font: Arial;
+$btn-font: Noto Sans JP;
+
+// Styles
+.content {
+    &__offers {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__combos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.offers {
+    &__column {
+        flex: 1 1 47%;
+        background-color: $second-color;
+        border-radius: 5px;
+        margin: 10px;
+        box-shadow: 0 0 10px $third-color;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    &__image {
+        & img {
+            max-width: 100%;
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        font-size: 18px;
+        margin: 10px 0 0 0;
+        padding: 5px;
+        color: $third-color;
+
+        & span {
+            color: $fourth-color;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__link {
+        margin: 10px;
+    }
+}
+.combos {
+    &__column {
+        flex: 1 1 31%;
+        background-color: $second-color;
+        border-radius: 5px;
+        margin: 10px;
+        box-shadow: 0 0 10px $third-color;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+
+        @media (min-width: 0px) {
+            flex: 1 1 50%;
+        }
+
+        @media (min-width: 640px) {
+            flex: 1 1 31%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    &__image {
+        & img {
+            max-width: 100%;
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+        }
+    }
+
+    &__label {
+        background-color: $first-color;
+
+        @media (min-width: 0) {
+            font-size: 36px;
+        }
+        @media (min-width: 320px) {
+            font-size: 38px;
+        }
+        @media (min-width: 640px) {
+            font-size: 44px;
+        }
+        @media (min-width: 1024px) {
+            font-size: 46px;
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        font-size: 18px;
+        margin: 10px 0 0 0;
+        padding: 5px;
+        color: $third-color;
+
+        & span {
+            color: $fourth-color;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__link {
+        margin: 10px;
+    }
+}
