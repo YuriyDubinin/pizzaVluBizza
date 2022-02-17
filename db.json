@@ -1,0 +1,13 @@
+{
+    "menu": [
+        {
+            "img": "path",
+            "altimg": "alt",
+            "title": "Title",
+            "descr": "Description",
+            "price": 7
+        }
+    ],
+    "requests": [],
+    "slider": []
+}
