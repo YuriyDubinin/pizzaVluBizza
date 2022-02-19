@@ -1,0 +1,39 @@
+.content {
+    &__offer-slider {
+        position: relative;
+
+        img {
+            height: 250px;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+    }
+}
+.offer-slider {
+    &__control {
+        list-style: none;
+        li {
+            position: absolute;
+            top: 42%;
+            cursor: pointer;
+            z-index: 3;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 8px 10px;
+            border-radius: 50%;
+            transition: 0.4s all;
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__prev-btn {
+        left: 0.5%;
+    }
+
+    &__next-btn {
+        right: 0.5%;
+    }
+}

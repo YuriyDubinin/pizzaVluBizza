@@ -880,6 +880,7 @@ h6 {
   text-transform: capitalize;
   color: rgba(0, 0, 0, 0.753);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.753);
+  padding: 10px 0;
 }
 
 @media (min-width: 0px) {
@@ -971,6 +972,46 @@ h6 {
 .btn-1:active {
   background-color: rgba(245, 245, 245, 0.8);
   color: rgba(0, 0, 0, 0.753);
+}
+
+.content__offer-slider {
+  position: relative;
+}
+
+.content__offer-slider img {
+  height: 250px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+}
+
+.offer-slider__control {
+  list-style: none;
+}
+
+.offer-slider__control li {
+  position: absolute;
+  top: 42%;
+  cursor: pointer;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 8px 10px;
+  border-radius: 50%;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.offer-slider__control li:hover {
+  background-color: #fff;
+}
+
+.offer-slider__prev-btn {
+  left: 0.5%;
+}
+
+.offer-slider__next-btn {
+  right: 0.5%;
 }
 
 .wrapper {

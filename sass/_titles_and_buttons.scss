@@ -25,6 +25,7 @@ $btn-font: Noto Sans JP;
     text-transform: capitalize;
     color: $third-color;
     text-shadow: 2px 2px 5px $third-color;
+    padding: 10px 0;
 
     @media (min-width: 0px) {
         font-size: 36px;
