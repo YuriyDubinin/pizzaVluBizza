@@ -433,8 +433,8 @@ h6 {
 @media (min-width: 640px) {
   .menu-field__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 48%;
-            flex: 0 0 48%;
+        -ms-flex: 0 0 32%;
+            flex: 0 0 32%;
     margin: 20px 0 0 0;
   }
 }
@@ -442,8 +442,8 @@ h6 {
 @media (min-width: 1024px) {
   .menu-field__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 30%;
-            flex: 0 0 30%;
+        -ms-flex: 0 0 24%;
+            flex: 0 0 24%;
   }
 }
 
@@ -530,7 +530,7 @@ h6 {
 }
 
 .adv__video-item {
-  padding: 10px 0;
+  padding: 5px 0;
   max-width: 600px;
 }
 

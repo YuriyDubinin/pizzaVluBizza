@@ -1,13 +1,8 @@
 {
-    "menu": [
-        {
-            "img": "path",
-            "altimg": "alt",
-            "title": "Title",
-            "descr": "Description",
-            "price": 7
-        }
-    ],
+    "menu": {
+        "pizza": [],
+        "milkshake": []
+    },
     "requests": [],
     "slider": []
 }

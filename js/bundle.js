@@ -127,6 +127,31 @@ function offerSlider() {
 
 /***/ }),
 
+/***/ "./js/services/services.js":
+/*!*********************************!*\
+  !*** ./js/services/services.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getData": () => (/* binding */ getData)
+/* harmony export */ });
+const getData = async (url) => {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        throw Error(`Could not fetch ${url}, status: ${response.status}`);
+    }
+
+    return await response.json();
+};
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/tiny-slider/src/helpers/addCSSRule.js":
 /*!************************************************************!*\
   !*** ./node_modules/tiny-slider/src/helpers/addCSSRule.js ***!
@@ -4042,10 +4067,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./js/modules/header.js");
 /* harmony import */ var _modules_offer_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/offer-slider */ "./js/modules/offer-slider.js");
 /* harmony import */ var _modules_combo_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/combo-slider */ "./js/modules/combo-slider.js");
+/* harmony import */ var _js_services_services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/services/services */ "./js/services/services.js");
 
 
 
 
+
+
+//for test db
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -4054,13 +4083,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (0,_modules_combo_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
     //test db
-    fetch("http://localhost:3000/menu")
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data);
-        });
+    (0,_js_services_services__WEBPACK_IMPORTED_MODULE_3__.getData)("http://localhost:3000/menu").then((data) => console.log(data.pizza));
 });
 
 })();
