@@ -9,14 +9,15 @@
 
 // Modules
 @import "_header.scss"; // Header
-@import "_special_offers.scss"; // Special offers
+@import "_offer_slider.scss"; // Offer slider
+@import "_combo_slider.scss"; // Combo slider
+
 @import "_menu.scss"; // Menu (pizza & milkshakes)
 @import "_adv.scss"; // Adv
 @import "_delivery.scss"; // Delivery
 @import "_footer.scss"; // Footer
 @import "_additional_classes.scss"; // Additional classes
 @import "_titles_and_buttons.scss"; // Titles and buttons
-@import "_offer_slider.scss"; // Offer slider
 
 // Variables
 $first-color: #f7dec6;

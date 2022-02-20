@@ -2,6 +2,57 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/modules/combo-slider.js":
+/*!************************************!*\
+  !*** ./js/modules/combo-slider.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
+
+
+function comboSlider() {
+    (0,_node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+        container: ".combo-slider__field",
+        items: 6,
+        slideBy: 1,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayButtonOutput: false,
+        controlsContainer: "#custom-combo-slider-control",
+        gutter: 20,
+        nav: false,
+        mouseDrag: true,
+        rewind: true,
+        speed: 1500,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            320: {
+                items: 2,
+            },
+            768: {
+                items: 4,
+                gutter: 10,
+            },
+            1140: {
+                items: 5,
+                gutter: 25,
+            },
+        },
+    });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (comboSlider);
+
+
+/***/ }),
+
 /***/ "./js/modules/header.js":
 /*!******************************!*\
   !*** ./js/modules/header.js ***!
@@ -47,8 +98,8 @@ function offerSlider() {
         slideBy: 1,
         autoplay: true,
         autoplayButtonOutput: false,
-        controlsContainer: "#custom-slider-control",
-        gutter: 10,
+        controlsContainer: "#custom-offer-slider-control",
+        gutter: 15,
         nav: false,
         mouseDrag: true,
         rewind: true,
@@ -61,9 +112,11 @@ function offerSlider() {
             },
             768: {
                 items: 4,
+                gutter: 10,
             },
             1140: {
                 items: 6,
+                gutter: 15,
             },
         },
     });
@@ -3988,6 +4041,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./js/modules/header.js");
 /* harmony import */ var _modules_offer_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/offer-slider */ "./js/modules/offer-slider.js");
+/* harmony import */ var _modules_combo_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/combo-slider */ "./js/modules/combo-slider.js");
+
 
 
 
@@ -3996,6 +4051,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", () => {
     (0,_modules_header__WEBPACK_IMPORTED_MODULE_0__["default"])();
     (0,_modules_offer_slider__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    (0,_modules_combo_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
     //test db
     fetch("http://localhost:3000/menu")

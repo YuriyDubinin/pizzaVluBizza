@@ -1,17 +1,19 @@
 import { tns } from "/node_modules/tiny-slider/src/tiny-slider";
 
-function offerSlider() {
+function comboSlider() {
     tns({
-        container: ".offer-slider__field",
-        items: 4,
+        container: ".combo-slider__field",
+        items: 6,
         slideBy: 1,
         autoplay: true,
+        autoplayTimeout: 3000,
         autoplayButtonOutput: false,
-        controlsContainer: "#custom-offer-slider-control",
-        gutter: 15,
+        controlsContainer: "#custom-combo-slider-control",
+        gutter: 20,
         nav: false,
         mouseDrag: true,
         rewind: true,
+        speed: 1500,
         responsive: {
             0: {
                 items: 1,
@@ -24,11 +26,11 @@ function offerSlider() {
                 gutter: 10,
             },
             1140: {
-                items: 6,
-                gutter: 15,
+                items: 5,
+                gutter: 25,
             },
         },
     });
 }
 
-export default offerSlider;
+export default comboSlider;
