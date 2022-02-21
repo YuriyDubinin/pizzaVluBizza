@@ -1,8 +1,147 @@
 {
-    "menu": {
-        "pizza": [],
-        "milkshake": []
-    },
-    "requests": [],
-    "slider": []
+    "pizza": [
+        {
+            "src": "img/menu/pizza/vlu_bizza.jpg",
+            "altimg": "pizza VluBizza",
+            "title": "Vlu Bizza",
+            "descr": "Dough, ham, mushrooms, a sea of cheese, aromatic mushrooms, and a few secret ingredients among which, of course, love.",
+            "price": 720
+        },
+        {
+            "src": "img/menu/pizza/pan_america.jpg",
+            "altimg": "americano pizza",
+            "title": "americano",
+            "descr": "Dough, Tomato sauce, bacon, ham, Pepperoni sausages, Bavarian sausages, Mozzarella cheese, basil, oregano.",
+            "price": 680
+        },
+        {
+            "src": "img/menu/pizza/pepperoni.jpg",
+            "altimg": "pepperoni pizza",
+            "title": "pepperoni",
+            "descr": "Dough, Tomato sauce, Pepperoni sausages, Mozzarella cheese, basil, oregano.",
+            "price": 9
+        },
+        {
+            "src": "img/menu/pizza/margarita.jpg",
+            "altimg": "margarita pizza",
+            "title": "margarita",
+            "descr": "Dough, Tomato sauce, Mozzarella cheese, tomatoes, basil, oregano.",
+            "price": 650
+        },
+        {
+            "src": "img/menu/pizza/bbq.jpg",
+            "altimg": "bbq pizza",
+            "title": "bbq",
+            "descr": "Dough, BBQ sauce, ham, chicken breast, mushrooms, Mozzarella cheese, red onion, basil, oregano.",
+            "price": 675
+        },
+        {
+            "src": "img/menu/pizza/4_cheese.jpg",
+            "altimg": "4 cheese pizza",
+            "title": "4 cheese",
+            "descr": "Dough, Cheese sauce, Dor Blue cheese, Mozzarella cheese, Parmesan cheese, Cheddar cheese, basil, oregano.",
+            "price": 620
+        },
+        {
+            "src": "img/menu/pizza/ranch.jpg",
+            "altimg": "ranch pizza",
+            "title": "ranch",
+            "descr": "Dough, Ranch sauce, grilled chicken, bacon, Mozzarella cheese, tomatoes, basil, oregano.",
+            "price": 650
+        },
+        {
+            "src": "img/menu/pizza/bavarian.jpg",
+            "altimg": "bavarian pizza",
+            "title": "bavarian",
+            "descr": "Dough, BBQ sauce, Bavarian sausages, Mozzarella cheese, pickles, tomatoes, basil, oregano.",
+            "price": 645
+        },
+        {
+            "src": "img/menu/pizza/mushroom.jpg",
+            "altimg": "mushroom pizza",
+            "title": "mushroom",
+            "descr": "Dough, Creamy mushroom sauce, ham, mushrooms, Mozzarella cheese, basil, oregano",
+            "price": 600
+        },
+        {
+            "src": "img/menu/pizza/mamamia.jpg",
+            "altimg": "mamamia pizza",
+            "title": "mamamia",
+            "descr": "Traditional italian recipe. The recipe for this incredible pizza was left to the chef by his grandmother, and her grandmother, and so on..",
+            "price": 710
+        },
+        {
+            "src": "img/menu/pizza/greek.jpg",
+            "altimg": "greek pizza",
+            "title": "greek",
+            "descr": "Delicious and juicy pizza cooked on a dense dough with the addition of a special sauce, spinach leaves, fresh Cherry tomatoes, bell peppers and olives.",
+            "price": 630
+        },
+        {
+            "src": "img/menu/pizza/vegetable.jpg",
+            "altimg": "vegetable pizza",
+            "title": "vegetable",
+            "descr": "For true gourmets, vegetables are combined into an incredible bouquet of flavors that can pleasantly surprise even those who don't like them.",
+            "price": 590
+        }
+    ],
+    "milkshake": [
+        {
+            "src": "img/menu/milkshake/classic.jpg",
+            "altimg": "classic milkshake",
+            "title": "classic",
+            "descr": "Ice cream, milk.",
+            "price": 100
+        },
+        {
+            "src": "img/menu/milkshake/chocolate.jpg",
+            "altimg": "chocolate milkshake",
+            "title": "chocolate",
+            "descr": "Ice cream, milk, chocolate.",
+            "price": 110
+        },
+        {
+            "src": "img/menu/milkshake/strawberry.jpg",
+            "altimg": "strawberry milkshake",
+            "title": "strawberry",
+            "descr": "Ice cream, milk, strawberry.",
+            "price": 110
+        },
+        {
+            "src": "img/menu/milkshake/banana.jpg",
+            "altimg": "banana milkshake",
+            "title": "banana",
+            "descr": "Ice cream, milk, banana.",
+            "price": 110
+        },
+        {
+            "src": "img/menu/milkshake/tropical.jpg",
+            "altimg": "tropical milkshake",
+            "title": "tropical",
+            "descr": "Ice cream, lilk, pineapple, feihua, coconut.",
+            "price": 125
+        },
+        {
+            "src": "img/menu/milkshake/multifruit.jpg",
+            "altimg": "multifruit milkshake",
+            "title": "multifruit",
+            "descr": "Ice cream, milk, apple, banana, kiwi.",
+            "price": 125
+        },
+        {
+            "src": "img/menu/milkshake/figs.jpg",
+            "altimg": "figs milkshake",
+            "title": "figs",
+            "descr": "Ice cream, milk, figs and something special.",
+            "price": 125
+        },
+        {
+            "src": "img/menu/milkshake/citrus.jpg",
+            "altimg": "citrus milkshake",
+            "title": "citrus",
+            "descr": "Ice cream, milk, juicy citruses.",
+            "price": 125
+        }
+    ],
+    "requests": []
 }

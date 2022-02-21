@@ -5,15 +5,10 @@ import offerSlider from "./modules/offer-slider";
 import comboSlider from "./modules/combo-slider";
 import menuCards from "./modules/menu-cards";
 
-//for test db
-import { getData } from "../js/services/services";
-
 document.addEventListener("DOMContentLoaded", () => {
     header();
     offerSlider();
     comboSlider();
-    menuCards();
-
-    //test db
-    getData("http://localhost:3000/menu").then((data) => console.log(data.pizza));
+    menuCards("http://localhost:3000/pizza", "#menu-pizza"); //adding pizza menu
+    menuCards("http://localhost:3000/milkshake", "#menu-milkshake"); //adding milkshake menu
 });
