@@ -38,10 +38,9 @@ $btn-font: Noto Sans JP;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-
         padding: 20px;
         p {
-            font-size: 28px;
+            font-size: 26px;
         }
         span {
             color: orange;
@@ -51,7 +50,7 @@ $btn-font: Noto Sans JP;
 
     &__description {
         flex: 1 1 100%;
-        font-size: 22px;
+        font-size: 20px;
         p {
             padding: 20px;
         }
@@ -62,7 +61,7 @@ $btn-font: Noto Sans JP;
 
     &__guarantees {
         flex: 1 1 100%;
-        font-size: 22px;
+        font-size: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

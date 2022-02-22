@@ -22,6 +22,7 @@ $btn-font: Noto Sans JP;
     &__row {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     &__info {
@@ -31,6 +32,7 @@ $btn-font: Noto Sans JP;
     &__phone-call {
         font-size: 18px;
         padding: 10px 0;
+
         a {
             color: $fifth-color;
         }
@@ -44,6 +46,7 @@ $btn-font: Noto Sans JP;
     &__serviced-cards {
         display: flex;
         align-items: center;
+
         img {
             margin: 0 15px 0 0;
         }
@@ -83,23 +86,79 @@ $btn-font: Noto Sans JP;
     }
 
     &__form {
+        position: relative;
     }
 
     &__item {
+        padding: 10px 5px;
+        color: $first-color;
     }
 
     &__form-title {
+        margin: 5px 0 0 0;
+        h3 {
+            font-size: 18px;
+        }
     }
 
     &__user-name {
+        margin: 5px 0 0 0;
+        input {
+            height: 30px;
+            width: 100%;
+            padding: 0 0 0 5px;
+
+            &:focus {
+                box-shadow: 0px 0px 3px $first-color;
+            }
+        }
     }
 
     &_user-mail {
+        margin: 5px 0 0 0;
+
+        input {
+            height: 30px;
+            width: 100%;
+            padding: 0 0 0 5px;
+
+            &:focus {
+                box-shadow: 0px 0px 3px $first-color;
+            }
+        }
     }
 
     &__user-text {
+        margin: 5px 0 0 0;
+
+        textarea {
+            padding: 5px 0 0 5px;
+
+            &:focus {
+                box-shadow: 0px 0px 3px $first-color;
+            }
+        }
     }
 
     &__button {
+        margin: 5px 0 0 0;
+        display: flex;
+        justify-content: center;
+
+        input {
+            padding: 5px 10px;
+            transition: all 0.4s;
+            border: 1px solid $first-color;
+            border-radius: 5px;
+            background-color: black;
+            color: $first-color;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0px 0px 3px $first-color;
+                background-color: $first-color;
+                color: black;
+            }
+        }
     }
 }
