@@ -4,6 +4,7 @@ $second-color: rgba(245, 245, 245, 0.8);
 $third-color: rgba(0, 0, 0, 0.753);
 $fourth-color: #ad415b;
 $fifth-color: whitesmoke;
+$sixth-color: rgb(221, 177, 2);
 $header-color: rgba(245, 245, 245, 0.329);
 $footer-color: rgba(0, 0, 0, 0.97);
 
@@ -16,8 +17,8 @@ $btn-font: Noto Sans JP;
 // Styles
 /* highlights active tab in headder */
 .active-tab {
-    color: $first-color;
-    text-shadow: 0 0 5px $third-color;
+    color: $sixth-color;
+    text-shadow: 1px 1px 1px black;
 }
 .scroll-lock {
     overflow: hidden;

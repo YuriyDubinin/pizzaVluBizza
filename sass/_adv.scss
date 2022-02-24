@@ -4,6 +4,7 @@ $second-color: rgba(245, 245, 245, 0.8);
 $third-color: rgba(0, 0, 0, 0.753);
 $fourth-color: #ad415b;
 $fifth-color: whitesmoke;
+$sixth-color: rgb(221, 177, 2);
 $header-color: rgba(245, 245, 245, 0.329);
 $footer-color: rgba(0, 0, 0, 0.97);
 
@@ -21,6 +22,7 @@ $btn-font: Noto Sans JP;
         justify-content: center;
         align-items: center;
         max-height: 400px;
+        padding: 20px 0;
     }
 }
 .adv {

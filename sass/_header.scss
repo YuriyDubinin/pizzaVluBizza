@@ -4,6 +4,7 @@ $second-color: rgba(245, 245, 245, 0.8);
 $third-color: rgba(0, 0, 0, 0.753);
 $fourth-color: #ad415b;
 $fifth-color: whitesmoke;
+$sixth-color: rgb(221, 177, 2);
 $header-color: rgba(245, 245, 245, 0.329);
 $footer-color: rgba(0, 0, 0, 0.97);
 
@@ -40,13 +41,11 @@ $btn-font: Noto Sans JP;
         height: 70px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
 
     &__logo {
         position: relative;
         z-index: 3;
-        order: 2;
         flex: 0 0 90px;
         & img {
             max-width: 100%;
@@ -60,7 +59,6 @@ $btn-font: Noto Sans JP;
     }
 
     &__navigation {
-        order: 1;
         display: flex;
         width: 550px;
         justify-content: space-between;
@@ -74,12 +72,11 @@ $btn-font: Noto Sans JP;
         text-shadow: 0 0 10px white;
 
         &:hover {
-            color: $fifth-color;
+            color: $sixth-color;
             text-shadow: 0 0 10px $fifth-color;
         }
     }
 
-    //need to rewrite the adaptive to match the code-style of the project
     @media (max-width: 767px) {
         .header {
             &__row {

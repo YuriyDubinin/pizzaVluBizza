@@ -4,6 +4,7 @@ $second-color: rgba(245, 245, 245, 0.8);
 $third-color: rgba(0, 0, 0, 0.753);
 $fourth-color: #ad415b;
 $fifth-color: whitesmoke;
+$sixth-color: rgb(221, 177, 2);
 $header-color: rgba(245, 245, 245, 0.329);
 $footer-color: rgba(0, 0, 0, 0.97);
 
@@ -49,6 +50,7 @@ $btn-font: Noto Sans JP;
     text-transform: capitalize;
     color: $third-color;
     text-shadow: 2px 2px 5px $third-color;
+    margin: 30px 0 0 0;
 
     @media (min-width: 0px) {
         font-size: 36px;
