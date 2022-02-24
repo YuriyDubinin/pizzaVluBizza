@@ -53,6 +53,49 @@ function comboSlider() {
 
 /***/ }),
 
+/***/ "./js/modules/footer.js":
+/*!******************************!*\
+  !*** ./js/modules/footer.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/services */ "./js/services/services.js");
+
+
+function footer() {
+    //collecting & transforming data to send to the server
+    function bindPostData(form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
+
+            //sending data
+            (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.postData)("http://localhost:3000/requests", jsonData).then((data) => {
+                console.log(data);
+            });
+        });
+    }
+
+    //execution
+    const forms = document.querySelectorAll("form");
+
+    forms.forEach((item) => {
+        bindPostData(item);
+    });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (footer);
+
+
+/***/ }),
+
 /***/ "./js/modules/header.js":
 /*!******************************!*\
   !*** ./js/modules/header.js ***!
@@ -257,7 +300,8 @@ function offerSlider() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getData": () => (/* binding */ getData)
+/* harmony export */   "getData": () => (/* binding */ getData),
+/* harmony export */   "postData": () => (/* binding */ postData)
 /* harmony export */ });
 const getData = async (url) => {
     const response = await fetch(url);
@@ -267,6 +311,18 @@ const getData = async (url) => {
     }
 
     return await response.json();
+};
+
+const postData = async (url, data) => {
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: data,
+    });
+
+    return await res.json();
 };
 
 
@@ -4190,6 +4246,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_offer_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/offer-slider */ "./js/modules/offer-slider.js");
 /* harmony import */ var _modules_combo_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/combo-slider */ "./js/modules/combo-slider.js");
 /* harmony import */ var _modules_menu_cards__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu-cards */ "./js/modules/menu-cards.js");
+/* harmony import */ var _modules_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/footer */ "./js/modules/footer.js");
+
 
 
 
@@ -4203,6 +4261,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (0,_modules_combo_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
     (0,_modules_menu_cards__WEBPACK_IMPORTED_MODULE_3__["default"])("http://localhost:3000/pizza", "#menu-pizza"); //adding pizza menu
     (0,_modules_menu_cards__WEBPACK_IMPORTED_MODULE_3__["default"])("http://localhost:3000/milkshake", "#menu-milkshake"); //adding milkshake menu
+    (0,_modules_footer__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 
 })();

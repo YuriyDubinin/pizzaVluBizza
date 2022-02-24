@@ -8,4 +8,16 @@ const getData = async (url) => {
     return await response.json();
 };
 
-export { getData };
+const postData = async (url, data) => {
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: data,
+    });
+
+    return await res.json();
+};
+
+export { getData, postData };
