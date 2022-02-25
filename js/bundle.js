@@ -64,31 +64,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/services */ "./js/services/services.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ "./js/modules/modal.js");
+
 
 
 function footer() {
+    const footerForm = document.querySelector(".footer__form"),
+        footerItem = document.querySelector(".footer__item");
+
+    //message for different outcomes of query execution events
+    const message = {
+        success: `Thanks! We will contact you shortly!`,
+        failure: `Something went wrong...`,
+        loading: `loading...`,
+    };
+
     //collecting & transforming data to send to the server
     function bindPostData(form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
+            (0,_modal__WEBPACK_IMPORTED_MODULE_1__.hideBlock)(footerItem);
 
+            //creating message block
+            const statusMessageWindow = document.createElement("div");
+
+            statusMessageWindow.textContent = message.loading;
+            statusMessageWindow.classList.add("footer-modal-feedback");
+
+            footerForm.append(statusMessageWindow);
+
+            (0,_modal__WEBPACK_IMPORTED_MODULE_1__.showBlock)(statusMessageWindow);
+
+            //collecting & transform data
             const formData = new FormData(form);
 
             const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
 
             //sending data
-            (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.postData)("http://localhost:3000/requests", jsonData).then((data) => {
-                console.log(data);
-            });
+            (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.postData)("http://localhost:3000/requests", jsonData)
+                .then((data) => {
+                    console.log(data);
+                    statusMessageWindow.textContent = message.success;
+
+                    setTimeout(() => {
+                        statusMessageWindow.remove();
+                        (0,_modal__WEBPACK_IMPORTED_MODULE_1__.showBlock)(footerItem);
+                    }, 3000);
+                })
+                .catch(() => {
+                    statusMessageWindow.textContent = message.failure;
+
+                    setTimeout(() => {
+                        statusMessageWindow.remove();
+                        (0,_modal__WEBPACK_IMPORTED_MODULE_1__.showBlock)(footerItem);
+                    }, 6000);
+                })
+                .finally(() => {
+                    form.reset();
+                });
         });
     }
 
     //execution
-    const forms = document.querySelectorAll("form");
-
-    forms.forEach((item) => {
-        bindPostData(item);
-    });
+    bindPostData(footerForm);
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (footer);
@@ -239,6 +277,32 @@ function menuCards(path, parentId) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuCards);
+
+
+/***/ }),
+
+/***/ "./js/modules/modal.js":
+/*!*****************************!*\
+  !*** ./js/modules/modal.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "showBlock": () => (/* binding */ showBlock),
+/* harmony export */   "hideBlock": () => (/* binding */ hideBlock)
+/* harmony export */ });
+function showBlock(modalSelector) {
+    modalSelector.classList.add("show", "fade");
+    modalSelector.classList.remove("hide");
+}
+
+function hideBlock(modalSelector) {
+    modalSelector.classList.add("hide");
+    modalSelector.classList.remove("show", "fade");
+}
+
+
 
 
 /***/ }),
