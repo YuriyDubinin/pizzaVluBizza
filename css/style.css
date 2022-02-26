@@ -516,16 +516,19 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 400px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 20px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .content__adv {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .adv__video-item {
@@ -549,6 +552,112 @@ h6 {
   .adv__video-item {
     max-width: 600px;
   }
+}
+
+.adv__body {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 320px) {
+  .adv__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+  }
+}
+
+@media (min-width: 640px) {
+  .adv__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .adv__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+}
+
+.adv__title {
+  background-color: #f7dec6;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 100px;
+}
+
+.adv__title h3 {
+  font-size: 35px;
+  color: #ddb102;
+  text-shadow: 1px 1px 1px black;
+}
+
+.adv__list {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.753);
+}
+
+.adv__list li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px 0;
+  align-items: center;
+  padding: auto 0;
+  height: 50px;
+}
+
+.adv__list li:last-child {
+  margin: 0;
+}
+
+.adv__list li::before {
+  content: "";
+  background: url(/img/adv/question_mark.png) 0 0 no-repeat;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: -70px;
+}
+
+.adv__button {
+  max-width: 64px;
+  max-height: 64px;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.adv__button:hover {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
 }
 
 .content__delivery {
