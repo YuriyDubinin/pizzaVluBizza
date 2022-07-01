@@ -20,7 +20,6 @@ function adv() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          console.log("true");
           advTitleBlock.style.animation = "sliding-appearance 2s ease 0s";
           advTitle.style.animation = "sliding-appearance 2.6s ease 0s";
           advList.style.animation = "sliding-appearance 2s ease 0s";
@@ -4327,12 +4326,9 @@ document.addEventListener("DOMContentLoaded", () => {
   (0,_modules_header__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_offer_slider__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_combo_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_modules_menu_cards__WEBPACK_IMPORTED_MODULE_3__["default"])("http://localhost:3000/pizza", "#menu-pizza"); //adding pizza menu
-
-  (0,_modules_menu_cards__WEBPACK_IMPORTED_MODULE_3__["default"])("http://localhost:3000/milkshake", "#menu-milkshake"); //adding milkshake menu
-
-  (0,_modules_adv__WEBPACK_IMPORTED_MODULE_4__["default"])(); //partners block with video and card
-
+  (0,_modules_menu_cards__WEBPACK_IMPORTED_MODULE_3__["default"])("http://localhost:3000/pizza", "#menu-pizza");
+  (0,_modules_menu_cards__WEBPACK_IMPORTED_MODULE_3__["default"])("http://localhost:3000/milkshake", "#menu-milkshake");
+  (0,_modules_adv__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_modules_footer__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
 }();

@@ -10,8 +10,6 @@ function adv() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    console.log("true");
-
                     advTitleBlock.style.animation = "sliding-appearance 2s ease 0s";
                     advTitle.style.animation = "sliding-appearance 2.6s ease 0s";
                     advList.style.animation = "sliding-appearance 2s ease 0s";

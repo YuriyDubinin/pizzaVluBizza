@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     header();
     offerSlider();
     comboSlider();
-    menuCards("http://localhost:3000/pizza", "#menu-pizza"); //adding pizza menu
-    menuCards("http://localhost:3000/milkshake", "#menu-milkshake"); //adding milkshake menu
-    adv(); //partners block with video and card
+    menuCards("http://localhost:3000/pizza", "#menu-pizza");
+    menuCards("http://localhost:3000/milkshake", "#menu-milkshake");
+    adv();
     footer();
 });
