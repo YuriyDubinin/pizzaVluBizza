@@ -20,7 +20,7 @@
 ## Setup
 
 ```bash
-$ git clone https://github.com/YuriDubinin/pizzaVluBizza.git
+$ git clone https://github.com/YuriyDubinin/pizzaVluBizza.git
 $ cd pizzaVluBizza
 $ npm i
 $ npx json-server db.json
